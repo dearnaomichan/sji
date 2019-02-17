@@ -1,0 +1,43 @@
+
+// 🎌 COLORS 🎌
+$green: #9df09b;
+$white: #f2f0ed;
+$blackish: #313437;
+
+$primary-color: #36465f;
+$secondary-color: #464646;
+$error: #de3535;
+$success: #d5f5d7;
+
+$max-width: 1200px;
+
+// 🎌 BREAKPOINTS 🎌
+$babybear: 400px;
+$mamabear: 769px;
+$papabear: 1140px;
+$monsterbear: 1300px;
+
+$font-family: Helvetica, sans-serif;
+$alt-font-family: monospace;
+$font-color: #353535;
+
+// 🎌 WEIGHTS 🎌
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$bold: 700;
+$black: 900;
+
+
+
+// 🎌 MEDIA QUERY 🎌
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  // font-size: $base-font-size * $ratio;
+}

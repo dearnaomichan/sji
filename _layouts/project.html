@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="main-inner page grid">
+  <div class="project-details column">
+    <h1>{{ page.title }}</h1>
+    <div class="date">
+      <h3>{{ page.date | date: "%B, %Y" }}</h3>
+    </div>
+    <p>{{ page.description }}</p>
+  </div>
+
+  <div class="project-content column three">
+    {% include slider_og.html %}
+  </div>
+</div>

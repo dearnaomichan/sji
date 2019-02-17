@@ -1,22 +1,26 @@
 # Site settings
-title: My Little Website
-tagline: "Changing the world, one uninspired quote at a time"
-url: "http://yourwebsite.com" # The base hostname & protocol for your site. Use it if you need absolute URL's
+title: Sabrina Yingxi Ji
+bio: is a graphic designer who specializes in print, publication digital media, and branding. Originally from Suzhou, China, she studied graphic design at the Minneapolis College of Art and Design (2014 - 2017) and received her BFA degree from there in May 2017. Currently working and living in Minneapolis, Minnesota. PMH Advertising Agency where she currently works for. Has worked for MCAD DesignWorks and BENWU STUDIO (Shanghai/ Beijing) before.
+# tagline: "Changing the world, one uninspired quote at a time"
+url: "http://localhost:4000/" # The base hostname & protocol for your site. Use it if you need absolute URL's
+permalink: /:title
+legal: "© Sabrina yingxi ji 2019"
 
 # Social
-socialimg: /img/social.jpg # be sure to change this image
-facebook: fbusername
-twitter: twusername
-github: ghusername
-googleplus: gusername
-instagram: igusername
+Linkedin: "https://www.linkedin.com/in/yingxi-ji-027a1ba8"
+Instagram: Sabritism
 
 # Contact
-phone: "916-276-1044" # This is my real number. You should text me.
-email: "hello@garrettboatman.com" # This is my real email address. Please don't email me.
+email: "yingxiji1992@gmail.com"
 
 # Use this for production
-#sass:
-#    style: compressed
+sass:
+   style: compressed
 
-exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
+exclude: [
+  .scss,
+  README.md,
+  node_modules,
+  gruntfile.js,
+  package.json
+]

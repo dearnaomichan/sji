@@ -1,0 +1,49 @@
+<div class="grid-wrap">
+  <div class="grid">
+
+    <div class="column one">
+      <div class="title">
+        <h2>{{ site.title }}</h2>
+      </div>
+
+      <h2>{{ site.bio }}</h2>
+    </div>
+
+    <div class="column two">
+      <div class="title">
+        <h2>Works</h2>
+      </div>
+
+      {% for post in site.categories.works %}
+      <div class="project-link">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <h2>{{ post.title }}</h2>
+        </a>
+          <div class="date">
+            <h3>{{ post.date | date: "%B, %Y" }}</h3>
+          </div>
+      </div>
+      {% endfor %}
+      {% for post in site.categories.braindump %}
+      <h2>{{ post.title }}</h2>
+      <div class="date">
+        <h3>{{ post.date-copy }}</h3>
+      </div>
+      {% endfor %}
+
+    </div>
+
+    <div class="column three">
+      <div class="title">
+        <h2>Write to me</h2>
+      </div>
+      <h2>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <br>
+      <a href="https://www.instagram.com/{{ site.Instagram }}/?hl=en">@{{ site.Instagram }}</a>
+      <br>
+      <a href="{{ site.Linkedin }}">LinkedIn</a>
+      </h2>
+    </div>
+  </div>
+</div>

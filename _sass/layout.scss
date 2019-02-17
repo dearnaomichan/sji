@@ -1,0 +1,193 @@
+// 🎌 INNER ADAPTIVE GRID 🎌
+// * { cursor: none; }
+
+body {
+	margin: 0;
+}
+
+.grid {
+  display: flex;
+  width: 95vw;
+  margin: auto;
+  max-width: $monsterbear;
+  margin-top: 2vw;
+
+ @include media-query($mamabear){
+	 display: inherit;
+ }
+
+  .column {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-right: 10vw;
+    &.two {
+      .project-link {
+        margin-bottom: 2vh;
+      }
+    }
+
+    &.three{
+      margin: 0;
+    }
+  }
+
+	.project-details {
+		flex-grow: .5;
+		margin-right:3vw;
+	}
+	.project-content {
+		flex-grow: 2;
+	}
+}
+
+
+// 🎌 FULL VIEWPORT 🎌
+
+input, button{
+  font-size: 1rem;
+}
+input{
+  padding-left: .1rem;
+}
+button{
+  padding: .1rem;
+}
+footer{
+  margin-top: 2rem;
+  .footer-inner {
+    text-align: center;
+  }
+}
+.environment{
+  text-align: center;
+  margin-top: 5rem;
+}
+
+// CUSTOM-CURSOR
+
+  // .cursor {
+  //   position: absolute;
+	// 	border-color: white;
+	// 	height: 50px;
+	// 	width: 50px;
+	// 	border-radius: 50%;
+	// 	transform: translateX(-50%) translateY(-50%);
+  // }
+
+// ⭐️ IMAGE SLIDER
+	.slider {
+  margin: 0 auto;
+  max-width: 940px;
+  img {
+    width: 100%;
+  }
+}
+
+.slide_viewer {
+  // height: calc(100% - 50px);
+  overflow: hidden;
+  position: relative;
+}
+
+.slide_group {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.slide {
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  &:first-child {
+    display: block;
+  }
+  &:nth-of-type(1) {
+    background: #D7A151;
+  }
+  &:nth-of-type(2) {
+    background: #F4E4CD;
+  }
+  &:nth-of-type(3) {
+    background: #C75534;
+  }
+  &:nth-of-type(4) {
+    background: #D1D1D4;
+  }
+}
+
+.slide_buttons {
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+a.slide_btn {
+  color: black;
+  font-size: 42px;
+  margin: 0 0.175em;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.slide_btn {
+  &.active, &:hover {
+    color: #428CC6;
+    cursor: pointer;
+  }
+}
+
+.directional_nav {
+  // height: 340px;
+  margin: 0 auto;
+  max-width: 940px;
+  position: relative;
+  // top: -340px;
+}
+
+.previous_btn {
+  bottom: 0;
+  left: 20px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+	@include media-query($mamabear){
+		left: 10px;
+	}
+}
+
+.next_btn {
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  right: 20px;
+  top: 0;
+	@include media-query($mamabear){
+		right: 10px;
+	}
+}
+
+.previous_btn, .next_btn {
+  cursor: pointer;
+  height: 40px;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  width: 40px;
+}
+
+.previous_btn:hover, .next_btn:hover {
+  opacity: 1;
+}
+
+
+
+// 👟 FOOTER
