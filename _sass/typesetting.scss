@@ -46,6 +46,12 @@ h2 {
   font-size: 1.2em;
   line-height: 1.5em;
   letter-spacing: 2px;
+
+  @include media-query($mamabear){
+    font-size: 1em;
+    line-height: 1.5rem;
+    letter-spacing: 1.5px;
+  }
 }
 
 h3 {
@@ -78,6 +84,7 @@ a {
   color: $white;
   text-decoration: none;
   transition: color 0.3s linear, border-bottom 0.3s linear;
+  // border-bottom: 1px $green solid;
 
    &:hover {
      color: $green;

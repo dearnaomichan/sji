@@ -4,6 +4,21 @@
 body {
 	margin: 0;
 }
+.site {
+	display: flex;
+ 	min-height: 100vh;
+ 	flex-direction: column;
+
+		@include media-query($mamabear){
+		 display: inherit;
+		}
+
+	.main-inner {
+		flex: 1;
+	}
+
+}
+
 .grid {
   display: flex;
   width: 95vw;
@@ -19,6 +34,15 @@ body {
     flex-grow: 1;
     flex-basis: 0;
     margin-right: 10vw;
+
+		@include media-query($papabear){
+			margin-right: 3vw;
+		}
+		@include media-query($mamabear){
+			margin-right: 0;
+			margin-bottom: 10vh;
+		}
+
     &.two {
       .project-link {
         margin-bottom: 2vh;
@@ -27,6 +51,11 @@ body {
 
     &.three{
       margin: 0;
+
+			@include media-query($mamabear){
+				margin-right: 0;
+				margin-bottom: 10vh;
+			}
     }
   }
 
@@ -39,53 +68,51 @@ body {
 	}
 }
 
-
-// 🎌 FULL VIEWPORT 🎌
-
-input, button{
-  font-size: 1rem;
-}
-input{
-  padding-left: .1rem;
-}
-button{
-  padding: .1rem;
-}
-footer{
-  margin-top: 2rem;
-  .footer-inner {
-    text-align: center;
-  }
-}
-.environment{
-  text-align: center;
-  margin-top: 5rem;
+// 🧞‍ HOVER OVER IMG AND IT APPEARS
+//
+// .project-link:hover .projectPreview{
+// 	display: inherit;
+// }
+.projectPreview {
+	display: none;
+	position: absolute;
+	transform: translate(10%, -50%);
+	img {
+		width: 35vh;
+		height: auto;
+	}
 }
 
-// CUSTOM-CURSOR
 
-  // .cursor {
-  //   position: absolute;
-	// 	border-color: white;
-	// 	height: 50px;
-	// 	width: 50px;
-	// 	border-radius: 50%;
-	// 	transform: translateX(-50%) translateY(-50%);
-  // }
+// 👟 FOOTER
+
+footer {
+	height: 5vh;
+	.footer-inner {
+		text-align: center;
+	}
+
+		@include media-query($mamabear){
+			margin-top: 2vh;
+		}
+}
 
 // ⭐️ IMAGE SLIDER
 	.slider {
   margin: 0 auto;
   max-width: 940px;
-  img {
-    width: 100%;
-  }
 }
 
 .slide_viewer {
-  // height: calc(100% - 50px);
   overflow: hidden;
   position: relative;
+	height: 650px;
+	@include media-query($mamabear){
+		height: 70vh;
+	}
+	@include media-query($babybear){
+		height: 40vh;
+	}
 }
 
 .slide_group {
@@ -99,20 +126,26 @@ footer{
   height: 100%;
   position: absolute;
   width: 100%;
+	align-items: center;
+
+	img {
+		height: 100%;
+	}
+
   &:first-child {
     display: block;
   }
   &:nth-of-type(1) {
-    background: #D7A151;
+    background: black;
   }
   &:nth-of-type(2) {
-    background: #F4E4CD;
+    background: gray;
   }
   &:nth-of-type(3) {
-    background: #C75534;
+    background: lightgray;
   }
   &:nth-of-type(4) {
-    background: #D1D1D4;
+    background: darkgray;
   }
 }
 
@@ -136,27 +169,38 @@ a.slide_btn {
 
 .slide_btn {
   &.active, &:hover {
-    color: #428CC6;
-    cursor: pointer;
+    // cursor: pointer;
   }
 }
 
 .directional_nav {
-  // height: 340px;
   margin: 0 auto;
   max-width: 940px;
   position: relative;
-  // top: -340px;
+
+  top: -325px;
+
+	@include media-query($mamabear){
+		top: -35vh;
+	}
+	@include media-query($babybear){
+		top: -20vh;
+	}
 }
 
 .previous_btn {
   bottom: 0;
-  left: 20px;
+  left: 0;
+  // left: 20px;
   margin: auto;
   position: absolute;
   top: 0;
 	@include media-query($mamabear){
 		left: 10px;
+	}
+
+	&:hover{
+		cursor: url('/assets/images/prev-arrow.svg'), pointer;
 	}
 }
 
@@ -164,29 +208,49 @@ a.slide_btn {
   bottom: 0;
   margin: auto;
   position: absolute;
-  right: 20px;
+  right: 0;
+  // right: 20px;
   top: 0;
 	@include media-query($mamabear){
 		right: 10px;
 	}
+	&:hover{
+		cursor: url('/assets/images/next-arrow.svg'), pointer;
+	}
 }
 
 .previous_btn, .next_btn {
-  cursor: pointer;
-  height: 40px;
+	// cursor: pointer;
+	height: 650px;
+	width: 360px;
+	// background-color: red;
+
+	@include media-query($mamabear){
+		height: 70vh;
+	}
+	@include media-query($babybear){
+		height: 40vh;
+	}
+
   opacity: 0.7;
   -webkit-transition: opacity 0.4s ease-in-out;
   -moz-transition: opacity 0.4s ease-in-out;
   -ms-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
-  width: 40px;
 }
 
 .previous_btn:hover, .next_btn:hover {
   opacity: 1;
 }
 
-
-
-// 👟 FOOTER
+.btn-wrapper-right {
+	right: 0;
+	position: absolute;
+	top: 50%;
+}
+.btn-wrapper-left {
+	left: 0;
+	position: absolute;
+	top: 50%;
+}

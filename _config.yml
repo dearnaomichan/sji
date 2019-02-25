@@ -17,6 +17,8 @@ email: "yingxiji1992@gmail.com"
 sass:
    style: compressed
 
+timezone: America/Chicago
+
 exclude: [
   .scss,
   README.md,
@@ -24,3 +26,26 @@ exclude: [
   gruntfile.js,
   package.json
 ]
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      categories: ""
+      layout: "project"
+      image: ""
+      slider:
+        slides:
+          - image: ""
+          - image: ""
+          - image: ""
+          - image: ""
+          - image: ""
