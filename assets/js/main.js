@@ -7,7 +7,7 @@ function previewImg(num) {
 }
 
 function projectLink(num) {
-	var out = $(".project-link-"+ num )
+	var out = $(".project-link-"+ num +" a h2" )
 	return out
 }
 
@@ -44,6 +44,7 @@ hoverShowImage(11)
       left: e.pageX,
       top: e.pageY
     });
+		console.log('braindump hovered!')
   }).mouseleave( function(){
     $("#prevImg", this).css('display', 'none')
   });

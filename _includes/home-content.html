@@ -5,21 +5,22 @@
       <div class="title">
         <h2>{{ site.title }}</h2>
       </div>
+      {% for post in site.categories.bio %}
+      <h2>{{ post.content }}</h2>
+      {% endfor %}
 
-      <h2>{{ site.bio }}</h2>
     </div>
 
     <div class="column two">
       <div class="title">
         <h2>Works</h2>
       </div>
-
       {% for post in site.categories.works %}
-      <div class="project-link-{{ forloop.index }}">
+      <div class="project-link-{{ forloop.index }} project-link">
         <a href="{{ post.url | prepend: site.baseurl }}">
           <h2>{{ post.title }}</h2>
         </a>
-        <div class="date">
+        <div>
           <h3>{{ post.date | date: "%B, %Y" }}</h3>
         </div>
 
@@ -34,9 +35,10 @@
         <a href="{{ post.url | prepend: site.baseurl }}">
           <h2>{{ post.title }}</h2>
         </a>
-        <div class="date">
+        <div>
           <h3>{{ post.date-copy }}</h3>
         </div>
+
         <div id="prevImg" class="projectPreview">
           <img src="{{ post.projectPreview }}" alt="">
         </div>

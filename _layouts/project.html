@@ -8,7 +8,16 @@ layout: default
     <div class="date">
       <h3>{{ page.date | date: "%B, %Y" }}</h3>
     </div>
-    <p>{{ page.content }}</p>
+    <div class="project-description">
+      {{ page.content }}
+    </div>
+
+    <div class="home_button">
+      <a href="{{ "/" | relative_url }}">
+        <img src="/assets/images/left.png" alt="">
+      </a>
+    </div>
+
   </div>
 
   <div class="project-content column three">

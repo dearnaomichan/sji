@@ -36,11 +36,14 @@ body {
     margin-right: 10vw;
 
 		@include media-query($papabear){
-			margin-right: 3vw;
+			margin-right: 6vw;
 		}
 		@include media-query($mamabear){
 			margin-right: 0;
 			margin-bottom: 10vh;
+		}
+		.project-link {
+			margin-bottom: 1em;
 		}
 
     &.two {
@@ -62,6 +65,12 @@ body {
 	.project-details {
 		flex-grow: .5;
 		margin-right:3vw;
+
+		.project-description {
+			p {
+				margin-top: .5em;
+			}
+		}
 	}
 	.project-content {
 		flex-grow: 2;
@@ -77,6 +86,7 @@ body {
 	display: none;
 	position: absolute;
 	transform: translate(10%, -50%);
+
 	img {
 		width: 35vh;
 		height: auto;
@@ -86,10 +96,32 @@ body {
 
 // 👟 FOOTER
 
+
+.home_button {
+	z-index: 1000;
+	position: absolute;
+	bottom: 0;
+	margin-left:1%;
+	height: 7vh;
+	img {
+		width: 45px;
+		height: auto;
+	}
+	@include media-query($mamabear){
+		display: none;
+	}
+}
 footer {
-	height: 5vh;
+	height: 6vh;
 	.footer-inner {
+		display: flex;
 		text-align: center;
+		.legal {
+			h3 {
+				color: white;
+			}
+			flex-grow: 2
+		}
 	}
 
 		@include media-query($mamabear){
@@ -198,10 +230,10 @@ a.slide_btn {
 	@include media-query($mamabear){
 		left: 10px;
 	}
-
-	&:hover{
-		cursor: url('/assets/images/prev-arrow.svg'), pointer;
-	}
+	//
+	// &:hover{
+	// 	cursor: url('/assets/images/prev-arrow.svg'), pointer;
+	// }
 }
 
 .next_btn {
@@ -214,9 +246,9 @@ a.slide_btn {
 	@include media-query($mamabear){
 		right: 10px;
 	}
-	&:hover{
-		cursor: url('/assets/images/next-arrow.svg'), pointer;
-	}
+	// &:hover{
+	// 	cursor: url('/assets/images/next-arrow.svg'), pointer;
+	// }
 }
 
 .previous_btn, .next_btn {
@@ -232,7 +264,7 @@ a.slide_btn {
 		height: 40vh;
 	}
 
-  opacity: 0.7;
+  opacity: 0.3;
   -webkit-transition: opacity 0.4s ease-in-out;
   -moz-transition: opacity 0.4s ease-in-out;
   -ms-transition: opacity 0.4s ease-in-out;
