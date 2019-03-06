@@ -1,37 +1,53 @@
+# Site settings
+title: Yingxi Ji
+# MCAD: '<a href="https://mcad.edu/">Minneapolis College of Art and Design</a>'
+# bio: is a graphic designer who specializes in print, publication digital media, and branding. Originally from Suzhou, China, she studied graphic design at Minneapolis College of Art and Design (2014 - 2017) and received her BFA degree from there in May 2017. Currently working and living in Minneapolis, Minnesota. PMH Advertising Agency where she currently works for. Has worked for MCAD DesignWorks and BENWU STUDIO (Shanghai/ Beijing) before.
+# tagline: "Changing the world, one uninspired quote at a time"
+url: "http://jiyingxi.com/" # The base hostname & protocol for your site. Use it if you need absolute URL's
+# baseurl: "/jiyingxi" # The base hostname & protocol for your site. Use it if you need absolute URL's
+permalink: /:title/index.html
+legal: "© Sabrina yingxi ji 2019"
 
-# Info
-title: Vue❤Jekyll
-twitter: "http://twitter.com/bryanschuetz"
-github: "http://github.com/bryanschuetz"
-baseurl: ""
-url: "http://bryanschuetz.github.io"
+# Social
+Linkedin: "https://www.linkedin.com/in/yingxi-ji-027a1ba8"
+Instagram: Sabritism
 
-# Collections
-collections:
-  posts:
-    title: Posts
-    output: true
-    permalink: "/news/:title"
+# Contact
+email: "yingxiji1992@gmail.com"
 
-# Settings
-markdown: kramdown
-gems:
-excerpt_seperator: "<!--more-->"
-destination: "./build"
-permalink: "/:title"
-exclude:
-  - components
-  - Gemfile
-  - Gemfile.lock
-  - ".gitignore"
-  - node_modules
-  - js/source.js
-  - webpack.config.js
-  - package.json
-  - .jshintrc
-  - .sass-cache
-  - browser-sync.js
-  - npm-debug.log
-  - README.MD
+# Use this for production
 sass:
-  style: compressed
+   style: compressed
+
+timezone: America/Chicago
+
+exclude: [
+  .scss,
+  README.md,
+  node_modules,
+  gruntfile.js,
+  package.json
+]
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      categories: ""
+      layout: "project"
+      image: ""
+      slider:
+        slides:
+          - image: ""
+          - image: ""
+          - image: ""
+          - image: ""
+          - image: ""
