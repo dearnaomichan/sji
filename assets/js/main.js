@@ -44,7 +44,6 @@ hoverShowImage(11)
       left: e.pageX,
       top: e.pageY
     });
-		console.log('braindump hovered!')
   }).mouseleave( function(){
     $("#prevImg", this).css('display', 'none')
   });

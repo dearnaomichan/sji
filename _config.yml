@@ -1,10 +1,11 @@
 # Site settings
-title: Sabrina Yingxi Ji
+title: Yingxi Ji
 # MCAD: '<a href="https://mcad.edu/">Minneapolis College of Art and Design</a>'
 # bio: is a graphic designer who specializes in print, publication digital media, and branding. Originally from Suzhou, China, she studied graphic design at Minneapolis College of Art and Design (2014 - 2017) and received her BFA degree from there in May 2017. Currently working and living in Minneapolis, Minnesota. PMH Advertising Agency where she currently works for. Has worked for MCAD DesignWorks and BENWU STUDIO (Shanghai/ Beijing) before.
 # tagline: "Changing the world, one uninspired quote at a time"
-url: "http://localhost:4000/" # The base hostname & protocol for your site. Use it if you need absolute URL's
-permalink: /:title
+url: "http://jiyingxi.com/" # The base hostname & protocol for your site. Use it if you need absolute URL's
+# baseurl: "/jiyingxi" # The base hostname & protocol for your site. Use it if you need absolute URL's
+permalink: /:title/index.html
 legal: "© Sabrina yingxi ji 2019"
 
 # Social
