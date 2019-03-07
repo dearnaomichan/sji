@@ -1,0 +1,31 @@
+<div class="slider">
+  <div class="slide_viewer">
+    <div class="slide_group">
+      {% for item in page.slider.slides %}
+      <div class="slide">
+        <!-- <div class="img-wrapper">
+          <div class="img-center"> -->
+        <img src="{{ item.image }}" alt="">
+        <!-- </div>
+        </div> -->
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div class="directional_nav">
+  <div class="previous_btn" title="Previous">
+    <div class="btn-wrapper-left">
+      <svg height="40" width="40">
+        <circle cx="20" cy="20" r="15" stroke="black" stroke-width="3" fill="black" />
+      </svg>
+    </div>
+  </div>
+  <div class="next_btn" title="Next">
+    <div class="btn-wrapper-right">
+      <svg height="40" width="40">
+        <circle cx="20" cy="20" r="15" stroke="black" stroke-width="3" fill="black" />
+      </svg>
+    </div>
+  </div>
+</div>

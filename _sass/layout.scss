@@ -1,0 +1,292 @@
+// 🎌 INNER ADAPTIVE GRID 🎌
+// * { cursor: none; }
+
+body {
+	margin: 0;
+}
+.site {
+	display: flex;
+ 	min-height: 100vh;
+ 	flex-direction: column;
+
+		@include media-query($mamabear){
+		 display: inherit;
+		}
+
+	.main-inner {
+		flex: 1;
+	}
+
+}
+
+.grid {
+  display: flex;
+  width: 95vw;
+  margin: auto;
+  max-width: $monsterbear;
+  margin-top: 2vw;
+
+ @include media-query($mamabear){
+	 display: inherit;
+ }
+
+  .column {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-right: 10vw;
+
+		@include media-query($papabear){
+			margin-right: 6vw;
+		}
+		@include media-query($mamabear){
+			margin-right: 0;
+			margin-bottom: 10vh;
+		}
+		.project-link {
+			margin-bottom: 1em;
+		}
+
+		.resume {
+			margin-top: 4vh;
+		}
+
+    &.two {
+      .project-link {
+        margin-bottom: 2vh;
+      }
+    }
+
+    &.three{
+      margin: 0;
+
+			@include media-query($mamabear){
+				margin-right: 0;
+				margin-bottom: 10vh;
+			}
+    }
+  }
+
+	.project-details {
+		flex-grow: .5;
+		margin-right:3vw;
+
+		.project-description {
+			p {
+				margin-top: .5em;
+			}
+		}
+	}
+	.project-content {
+		flex-grow: 2;
+	}
+}
+
+// 🧞‍ HOVER OVER IMG AND IT APPEARS
+//
+// .project-link:hover .projectPreview{
+// 	display: inherit;
+// }
+.projectPreview {
+	display: none;
+	position: absolute;
+	transform: translate(10%, -50%);
+
+	img {
+		width: 35vh;
+		height: auto;
+	}
+}
+
+
+// 👟 FOOTER
+
+
+.home_button {
+	z-index: 1000;
+	position: absolute;
+	bottom: 0;
+	margin-left:1%;
+	height: 7vh;
+	img {
+		width: 45px;
+		height: auto;
+	}
+	@include media-query($mamabear){
+		display: none;
+	}
+}
+footer {
+	height: 6vh;
+	.footer-inner {
+		display: flex;
+		text-align: center;
+		.legal {
+			h3 {
+				color: white;
+			}
+			flex-grow: 2
+		}
+	}
+
+		@include media-query($mamabear){
+			margin-top: 2vh;
+		}
+}
+
+// ⭐️ IMAGE SLIDER
+	.slider {
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+.slide_viewer {
+  overflow: hidden;
+  position: relative;
+	height: 650px;
+	@include media-query($mamabear){
+		height: 70vh;
+	}
+	@include media-query($babybear){
+		height: 40vh;
+	}
+}
+
+.slide_group {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.slide {
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+	align-items: center;
+
+	img {
+		height: 100%;
+	}
+
+  &:first-child {
+    display: block;
+  }
+  &:nth-of-type(1) {
+    background: black;
+  }
+  &:nth-of-type(2) {
+    background: gray;
+  }
+  &:nth-of-type(3) {
+    background: lightgray;
+  }
+  &:nth-of-type(4) {
+    background: darkgray;
+  }
+}
+
+.slide_buttons {
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+a.slide_btn {
+  color: black;
+  font-size: 42px;
+  margin: 0 0.175em;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.slide_btn {
+  &.active, &:hover {
+    // cursor: pointer;
+  }
+}
+
+.directional_nav {
+  margin: 0 auto;
+  max-width: 940px;
+  position: relative;
+
+  top: -325px;
+
+	@include media-query($mamabear){
+		top: -35vh;
+	}
+	@include media-query($babybear){
+		top: -20vh;
+	}
+}
+
+.previous_btn {
+  bottom: 0;
+  left: 0;
+  // left: 20px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+	@include media-query($mamabear){
+		left: 10px;
+	}
+	//
+	// &:hover{
+	// 	cursor: url('/assets/images/prev-arrow.svg'), pointer;
+	// }
+}
+
+.next_btn {
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  // right: 20px;
+  top: 0;
+	@include media-query($mamabear){
+		right: 10px;
+	}
+	// &:hover{
+	// 	cursor: url('/assets/images/next-arrow.svg'), pointer;
+	// }
+}
+
+.previous_btn, .next_btn {
+	// cursor: pointer;
+	height: 650px;
+	width: 360px;
+	// background-color: red;
+
+	@include media-query($mamabear){
+		height: 70vh;
+	}
+	@include media-query($babybear){
+		height: 40vh;
+	}
+
+  opacity: 0.3;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.previous_btn:hover, .next_btn:hover {
+  opacity: 1;
+}
+
+.btn-wrapper-right {
+	right: 0;
+	position: absolute;
+	top: 50%;
+}
+.btn-wrapper-left {
+	left: 0;
+	position: absolute;
+	top: 50%;
+}
