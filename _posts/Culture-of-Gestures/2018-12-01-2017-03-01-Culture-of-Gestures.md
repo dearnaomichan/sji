@@ -1,9 +1,10 @@
 ---
-title: Muji is Not Bad
+title: The Culture of Gesture
+date: 2018-12-01 11:47:12 -06:00
+categories:
+- works
 layout: project
-categories: works
-date: '2017-07-01 12:47:12 -0500'
-image:  assets/images/muji-preview.jpg
+image: assets/images/culture-preview.jpg
 slider:
   slides:
   - image: culture_1.jpg
