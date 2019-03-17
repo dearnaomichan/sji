@@ -15,7 +15,6 @@ defaults:
   values:
     categories: ''
     layout: project
-
 url: http://jiyingxi.com/
 permalink: "/:title/index.html"
 legal: "© Sabrina yingxi ji 2019"
