@@ -7,11 +7,16 @@
       </div>
       {% for post in site.categories.bio %}
       <h2>{{ post.content }}</h2>
+        {% for item in post.resume %}
         <div class="resume"><h3>
-          <a href="{{ post.resume }}" download="ji_sabrinayingxi">Download CV</a>
+          <a href="{{ item.image }}" download="ji_sabrinayingxi">Download CV</a>
         </h3></div>
+        {% endfor %}
       {% endfor %}
+
+
     </div>
+
     <div class="column two">
       <div class="title">
         <h2>Works</h2>
