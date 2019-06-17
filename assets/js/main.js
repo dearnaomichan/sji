@@ -70,15 +70,7 @@ $('.slider').each(function() {
 
     bulletArray[currentIndex].removeClass('active');
     bulletArray[newIndex].addClass('active');
-    //
-    // if (newIndex > currentIndex) {
-    //   slideLeft = '100%';
-    //   animateLeft = '-100%';
-    // } else {
-    //   slideLeft = '-100%';
-    //   animateLeft = '100%';
-    // }
-
+    
     $slides.eq(newIndex).css({
       display: 'block',
       left: slideLeft
