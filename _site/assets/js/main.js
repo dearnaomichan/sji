@@ -90,10 +90,10 @@ $('.slider').each(function() {
         display: 'none'
       });
       $slides.eq(newIndex).css({
-        left: 0
+        // left: 0
       });
       $group.css({
-        left: 0
+        // left: 0
       });
       currentIndex = newIndex;
     });
